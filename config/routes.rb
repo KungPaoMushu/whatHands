@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'welcome/index'
   root 'welcome#index'
+  get 'posts/index'
+  root 'posts#index'
   resources :posts do
     resources :comments
     #Comments are only avaliable inside posts (hence do)
