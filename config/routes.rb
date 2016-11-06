@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'pages/addrecipe'
-
+ 
   get 'pages/404'
 
   get 'pages/422'

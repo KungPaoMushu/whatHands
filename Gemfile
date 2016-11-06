@@ -16,6 +16,8 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem 'bootstrap', '~> 4.0.0.alpha5'
+
+gem 'execjs', '~> 2.7'
 gem 'autoprefixer-rails'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
