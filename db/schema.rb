@@ -12,6 +12,15 @@
 
 ActiveRecord::Schema.define(version: 20161112004734) do
 
+  create_table "comments", force: :cascade do |t|
+    t.string   "author"
+    t.text     "body"
+    t.integer  "post_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["post_id"], name: "index_comments_on_post_id"
+  end
+
   create_table "directions", force: :cascade do |t|
     t.text     "step"
     t.integer  "recipe_id"
@@ -26,6 +35,14 @@ ActiveRecord::Schema.define(version: 20161112004734) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["recipe_id"], name: "index_ingredients_on_recipe_id"
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string   "title"
+    t.text     "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "author"
   end
 
   create_table "recipes", force: :cascade do |t|
