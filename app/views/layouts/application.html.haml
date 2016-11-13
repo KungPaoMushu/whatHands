@@ -3,17 +3,19 @@
 %head
 	%title Recipe Collective
 	= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' =>true
+	= stylesheet_link_tag    'font-awesome', media: 'all', 'data-turbolinks-track' =>true
 	= javascript_include_tag 'application', 'data-turbolinks-track' => true
 	= csrf_meta_tags
 
 %body
-	%nav.navbar.navbar-default
+	%nav.navbar.navbar-default.background-dark.text-light
 		.container
 			.navbar-brand= link_to "Recipe Collective", root_path
 
 			- if user_signed_in?
 				%ul.nav.navbar-nav.navbar-right
 					%li= link_to "New Recipe", new_recipe_path
+					%li= link_to "Edit Account", edit_user_registration_path
 					%li= link_to "Sign Out", destroy_user_session_path, method: :delete
 			- else
 				%ul.nav.navbar-nav.navbar-right
@@ -21,7 +23,20 @@
 					%li= link_to "Sign In", new_user_session_path
 	.container
 		- flash.each do |name, msg|
-			= content_tag :div, msg, class: "alert"
-				
+			= content_tag :div, msg, class: "alert"			
 		= yield
-	
+
+%footer
+	#footer.background-dark.text-light
+		.container.no-padding
+			.row
+				#footermenu.col-md-12
+					%ul.list-unstyled.list-inline
+						%li
+						%li
+						%li
+						%li
+						#copyright.col-md-3.pull-right
+							%p.fa.pull-right (c) 2016 WhatHands
+							%p.fa.pull-right  Cameron Chien, Jon Wong,
+							%p.fa.pull-right  Andre Voloshin, Austin Yam	

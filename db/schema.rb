@@ -10,15 +10,61 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161112004734) do
+ActiveRecord::Schema.define(version: 20161113094546) do
 
   create_table "comments", force: :cascade do |t|
-    t.string   "author"
+    t.integer  "commentable_id"
+    t.string   "commentable_type"
+    t.string   "title"
     t.text     "body"
-    t.integer  "post_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["post_id"], name: "index_comments_on_post_id"
+    t.string   "subject"
+    t.integer  "user_id",          null: false
+    t.integer  "parent_id"
+    t.integer  "lft"
+    t.integer  "rgt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["commentable_id", "commentable_type"], name: "index_comments_on_commentable_id_and_commentable_type"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "commontator_comments", force: :cascade do |t|
+    t.string   "creator_type"
+    t.integer  "creator_id"
+    t.string   "editor_type"
+    t.integer  "editor_id"
+    t.integer  "thread_id",                     null: false
+    t.text     "body",                          null: false
+    t.datetime "deleted_at"
+    t.integer  "cached_votes_up",   default: 0
+    t.integer  "cached_votes_down", default: 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["cached_votes_down"], name: "index_commontator_comments_on_cached_votes_down"
+    t.index ["cached_votes_up"], name: "index_commontator_comments_on_cached_votes_up"
+    t.index ["creator_id", "creator_type", "thread_id"], name: "index_commontator_comments_on_c_id_and_c_type_and_t_id"
+    t.index ["thread_id", "created_at"], name: "index_commontator_comments_on_thread_id_and_created_at"
+  end
+
+  create_table "commontator_subscriptions", force: :cascade do |t|
+    t.string   "subscriber_type", null: false
+    t.integer  "subscriber_id",   null: false
+    t.integer  "thread_id",       null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["subscriber_id", "subscriber_type", "thread_id"], name: "index_commontator_subscriptions_on_s_id_and_s_type_and_t_id", unique: true
+    t.index ["thread_id"], name: "index_commontator_subscriptions_on_thread_id"
+  end
+
+  create_table "commontator_threads", force: :cascade do |t|
+    t.string   "commontable_type"
+    t.integer  "commontable_id"
+    t.datetime "closed_at"
+    t.string   "closer_type"
+    t.integer  "closer_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["commontable_id", "commontable_type"], name: "index_commontator_threads_on_c_id_and_c_type", unique: true
   end
 
   create_table "directions", force: :cascade do |t|
@@ -35,14 +81,6 @@ ActiveRecord::Schema.define(version: 20161112004734) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["recipe_id"], name: "index_ingredients_on_recipe_id"
-  end
-
-  create_table "posts", force: :cascade do |t|
-    t.string   "title"
-    t.text     "body"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "author"
   end
 
   create_table "recipes", force: :cascade do |t|

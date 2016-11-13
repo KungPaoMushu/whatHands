@@ -38,9 +38,15 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    acts_as_commentable_with_threading (2.0.1)
+      activerecord (>= 4.0)
+      activesupport (>= 4.0)
+      awesome_nested_set (>= 3.0)
     arel (7.1.4)
     autoprefixer-rails (6.5.3)
       execjs
+    awesome_nested_set (3.1.1)
+      activerecord (>= 4.0.0, < 5.1)
     bcrypt (3.1.11-x86-mingw32)
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
@@ -73,6 +79,8 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.7.0)
+    font-awesome-rails (4.7.0.0)
+      railties (>= 3.2, < 5.1)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     haml (4.0.7)
@@ -128,6 +136,9 @@ GEM
       nokogiri (~> 1.6.0)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rails-timeago (2.15.0)
+      actionpack (>= 3.1)
+      activesupport (>= 3.1)
     railties (5.0.0.1)
       actionpack (= 5.0.0.1)
       activesupport (= 5.0.0.1)
@@ -137,6 +148,7 @@ GEM
     rake (11.3.0)
     responders (2.3.0)
       railties (>= 4.2.0, < 5.1)
+    responsive-nav-rails (1.0.39)
     rubygems-update (2.6.8)
     sass (3.4.22)
     sass-rails (5.0.6)
@@ -183,6 +195,8 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  acts_as_commentable_with_threading
+  awesome_nested_set
   bootstrap-sass (~> 3.3, >= 3.3.6)
   byebug
   carrierwave (>= 1.0.0.rc, < 2.0)
@@ -191,12 +205,15 @@ DEPENDENCIES
   coffee-script-source (= 1.8.0)
   database_cleaner
   devise (~> 4.2)
+  font-awesome-rails
   haml (~> 4.0, >= 4.0.7)
   jbuilder (~> 2.5)
   jquery-rails
   paperclip (~> 5.1)
   puma (~> 3.0)
   rails (~> 5.0.0, >= 5.0.0.1)
+  rails-timeago (~> 2.0)
+  responsive-nav-rails (~> 1.0, >= 1.0.38)
   rubygems-update (~> 2.6, >= 2.6.8)
   sass-rails (~> 5.0)
   simple_form (~> 3.3, >= 3.3.1)

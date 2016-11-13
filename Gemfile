@@ -14,7 +14,11 @@ gem 'puma', '~> 3.0'
 gem 'devise', '~> 4.2'
 gem 'sass-rails', '~> 5.0'
 gem 'carrierwave', '>= 1.0.0.rc', '< 2.0'
-
+gem "font-awesome-rails"
+gem 'responsive-nav-rails', '~> 1.0', '>= 1.0.38'
+gem 'acts_as_commentable_with_threading'
+gem 'rails-timeago', '~> 2.0'
+gem 'awesome_nested_set'
 
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'

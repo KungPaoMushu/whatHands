@@ -10,6 +10,9 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require rails-timeago
+//= require responsive-nav
+//= require comments
 //= require jquery
 //= require jquery_ujs
 //= require cocoon

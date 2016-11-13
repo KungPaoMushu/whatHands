@@ -4,9 +4,13 @@ class RecipesController < ApplicationController
 
 	def index
 		@recipe = Recipe.all.order("created_at DESC")
+		
 	end
 
 	def show
+			@recipe = Recipe.find(params[:id])
+	    @comments = @recipe.comment_threads.order('created_at desc')
+	    @new_comment = Comment.build_from(@recipe, current_user.id, "")
 	end
 
 	def new
