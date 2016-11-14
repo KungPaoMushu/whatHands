@@ -12,6 +12,6 @@ mount_uploader :image, ImageUploader
   															reject_if: proc { |attributes| attributes['step'].blank? },
   															allow_destroy: true
 
-	validates :title, :description, :image, :cuisine_type, :meal_type, presence: true
+	validates :title, :image, :cuisine_type, :meal_type, :ingredients, :directions, presence: true
 
 end
