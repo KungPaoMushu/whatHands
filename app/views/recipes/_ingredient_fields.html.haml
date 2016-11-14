@@ -1,7 +1,12 @@
 .form-inline.clearfix
 	.nested-fields
-		= f.input :name, input_html: { class: 'form-input form-control' }
-		= f.input :quantity, input_html: { class: 'form-input form-control' }
-		= f.input :unit, input_html: { class: 'form-input form-control' }
+		= f.input :name, input_html: { class: 'form-control',style: "width:100%" }
+		%br
+		= f.input :quantity, input_html: { class: 'form-control', style: "width:100%" }
+		%br
+		= f.input :unit, input_html: { class: 'form-control', style: "width:100%" }
+		%br
 
-		= link_to_remove_association "Remove", f, class: "form-button btn btn-default"
+		= link_to_remove_association "Remove", f, class: "form-button btn btn-sm btn-default", style: "float: right"
+	%h1
+		%br
