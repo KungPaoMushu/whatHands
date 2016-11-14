@@ -13,7 +13,7 @@ class CommentsController < ApplicationController
         format.html  { render :action => "new" }
       end
     end
-  end
+  
   
   def destroy
     @user = current_user
