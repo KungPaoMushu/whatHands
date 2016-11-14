@@ -6,6 +6,8 @@
 			#recipe_info
 				%h1= @recipe.title
 				%p.description= @recipe.description
+				%p.cuisine_type= @recipe.cuisine_type
+				%p.meal_type= @recipe.meal_type
 				%p
 					Submitted by
 					= @recipe.user.email
@@ -17,6 +19,10 @@
 				%ul
 					- @recipe.ingredients.each do |ingredient|
 						%li= ingredient.name
+						%li= ingredient.quantity
+						%li= ingredient.unit
+
+
 
 		.col-md-6
 			#directions

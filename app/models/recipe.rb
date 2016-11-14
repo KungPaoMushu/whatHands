@@ -4,7 +4,6 @@ class Recipe < ActiveRecord::Base
 	has_many :directions
 	has_many :comments
 	acts_as_commentable
-	acts_as_nested_set
 mount_uploader :image, ImageUploader
 	accepts_nested_attributes_for :ingredients,
   															reject_if: proc { |attributes| attributes['name'].blank? },
@@ -13,6 +12,6 @@ mount_uploader :image, ImageUploader
   															reject_if: proc { |attributes| attributes['step'].blank? },
   															allow_destroy: true
 
-	validates :title, :description, :image, presence: true
+	validates :title, :description, :image, :cuisine_type, :meal_type, presence: true
 
 end
