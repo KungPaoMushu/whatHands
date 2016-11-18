@@ -4,7 +4,13 @@
 	%title Recipe Collective
 	= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' =>true
 	= stylesheet_link_tag    'font-awesome', media: 'all', 'data-turbolinks-track' =>true
+	= stylesheet_link_tag    'nexus', media: 'all', 'data-turbolinks-track' =>true
+
+	= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:100,300,400'
+	= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Roboto:400,300'
 	= javascript_include_tag 'application', 'data-turbolinks-track' => true
+	= javascript_include_tag 'modernizr'
+
 	= csrf_meta_tags
 
 %body

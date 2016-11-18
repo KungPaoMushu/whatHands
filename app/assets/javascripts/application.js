@@ -10,10 +10,16 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
+//= require jquery-ui
+//= require slimbox2.min
+//= require isotope
 //= require rails-timeago
 //= require responsive-nav
 //= require comments
 //= require jquery
 //= require jquery_ujs
+//= require jquery.sticky.js
+//= require jquery-visibility
 //= require cocoon
 //= require_tree .
