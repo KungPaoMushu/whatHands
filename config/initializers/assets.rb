@@ -11,5 +11,9 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( search.js )
 Rails.application.config.assets.precompile += %w( font-awesome.css.scss )
 Rails.application.config.assets.precompile += %w( nexus.css.scss )
+Rails.application.config.assets.precompile += %w( recipes.scss )
+Rails.application.config.assets.precompile += %w( pages.scss )
+Rails.application.config.assets.precompile += %w( responsive.css.scss )
+Rails.application.config.assets.precompile += %w( comments.css.scss )
 
 
