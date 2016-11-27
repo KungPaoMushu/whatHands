@@ -6,10 +6,15 @@
 			#recipe_info
 				%h1= @recipe.title
 				%p.description= @recipe.description
-				%p.cuisine_type= @recipe.cuisine_type
-				%p.meal_type= @recipe.meal_type
+
 				%p
-					Submitted by
+					%strong Cuisine :
+					= @recipe.cuisine_type
+				%p
+					%strong Meal Type :
+					= @recipe.meal_type
+				%p
+					%strong Submitted by :
 					= @recipe.user.email
 
 	.row
@@ -18,11 +23,8 @@
 				%h2 Ingredients
 				%ul
 					- @recipe.ingredients.each do |ingredient|
-						%li= ingredient.name
-						%br
-						%li= ingredient.quantity
-						%br
-						%li= ingredient.unit
+						%li
+							%p= "#{ingredient.name} : #{ingredient.quantity} #{ingredient.unit}"
 
 
 
@@ -37,7 +39,7 @@
 			= link_to "Back", root_path, class: "btn btn-default"
 			- if user_signed_in?
 				= link_to "Edit", edit_recipe_path, class: "btn btn-default"
-				= link_to "Delete", recipe_path, method: :delete, data: {confirm: "Are you sure you want to delete?" }, class: "btn btn-default"
+				= link_to "Delete", recipe_path, method: :delete, data: {confirm: "Are you sure you want to delete?" }, class: "btn btn-danger"
 
 	.row
 		.col-md-12
