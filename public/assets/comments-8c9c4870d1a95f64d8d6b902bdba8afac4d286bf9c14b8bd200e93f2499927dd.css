@@ -1,0 +1,40 @@
+/* line 1, C:/Users/Cameron/Documents/GitHub/whatHands/app/assets/stylesheets/comments.css.scss */
+.comments-header {
+  border-bottom: 1px dotted gray;
+  margin-bottom: 10px;
+}
+
+/* line 6, C:/Users/Cameron/Documents/GitHub/whatHands/app/assets/stylesheets/comments.css.scss */
+.comments-container P {
+  margin-bottom: 0px;
+}
+
+/* line 10, C:/Users/Cameron/Documents/GitHub/whatHands/app/assets/stylesheets/comments.css.scss */
+.comments-container .comment-nav {
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+
+/* line 15, C:/Users/Cameron/Documents/GitHub/whatHands/app/assets/stylesheets/comments.css.scss */
+.comments-container .comment-nav span {
+  font-size: 10px;
+  font-weight: bold;
+  color: #888;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* line 23, C:/Users/Cameron/Documents/GitHub/whatHands/app/assets/stylesheets/comments.css.scss */
+.comments-container .comment-nav span:hover {
+  text-decoration: none;
+}
+
+/* line 27, C:/Users/Cameron/Documents/GitHub/whatHands/app/assets/stylesheets/comments.css.scss */
+.reply-form {
+  display: none;
+}
+
+/* line 31, C:/Users/Cameron/Documents/GitHub/whatHands/app/assets/stylesheets/comments.css.scss */
+.comments-show {
+  margin-left: 25px;
+}

@@ -1,0 +1,35 @@
+/* #Tablet (Landscape)
+================================================== */
+@media only screen and (max-width: 1080px) {
+  /* Disable CSS animations */
+  /* line 8, C:/Users/Cameron/Documents/GitHub/whatHands/app/assets/stylesheets/responsive.css.scss */
+  .animated {
+    -webkit-animation-duration: 0;
+    animation-duration: 0;
+    -webkit-animation-delay: 0;
+    animation-delay: 0;
+  }
+
+  /* Disable Parallax */
+  /* line 16, C:/Users/Cameron/Documents/GitHub/whatHands/app/assets/stylesheets/responsive.css.scss */
+  .parallax-bg1, .parallax-bg2, .parallax-bg3 {
+    background-position: 50% 0 !important;
+  }
+}
+/* #Tablet (Portrait)
+================================================== */
+/* #Mobile (Landscape)
+================================================== */
+@media only screen and (max-width: 767px) {
+  /* line 35, C:/Users/Cameron/Documents/GitHub/whatHands/app/assets/stylesheets/responsive.css.scss */
+  .carousel-control.right span, .carousel-control.icon-next span {
+    right: 20%;
+  }
+
+  /* line 38, C:/Users/Cameron/Documents/GitHub/whatHands/app/assets/stylesheets/responsive.css.scss */
+  .carousel-control.left span, .carousel-control.icon-prev span {
+    left: 15%;
+  }
+}
+/*  #Mobile (Portrait)
+================================================== */
