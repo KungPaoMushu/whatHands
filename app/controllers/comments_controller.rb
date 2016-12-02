@@ -1,5 +1,16 @@
 class CommentsController < ApplicationController  
-  before_action :authenticate_user!
+  before_action :set_comment, only: [:show,:edit, :update, :destroy]
+  before_filter :authenticate_user!
+
+  
+  def index
+    if user_signed_in?
+      @comments = current_user.comments
+    else
+      redirct_to recipes_url,
+      notice: 'Not logged in.'
+  end
+end
 
   def create
     commentable = commentable_type.constantize.find(commentable_id)
@@ -13,8 +24,19 @@ class CommentsController < ApplicationController
         format.html  { render :action => "new" }
       end
     end
-  
-  
+
+    def update
+      respond_to do |format|
+        if @comment.update(comment_params)
+          format.html { redirect_to posts_url, notice: 'Comment was successfully updated.' }
+          format.json { render :show, status: :ok, location: @post }
+        else
+          format.html { render :edit }
+          format.json { render json: @post.errors, status: :unprocessable_entity }
+        end
+      end
+    end
+    
   def destroy
     @user = current_user
     @comment = Comment.find(params[:id])
@@ -27,6 +49,7 @@ class CommentsController < ApplicationController
   private
 
   def comment_params
+    params.require(:user_id)
     params.require(:comment).permit(:body, :commentable_id, :commentable_type, :comment_id)
   end
 
