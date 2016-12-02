@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Recipe Collective</title>
+    <%= csrf_meta_tags %>
+    
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'font-awesome', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'nexus', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:100,300,400' %>
+    <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Roboto:400,300' %>
+  
+    <%= javascript_include_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'modernizr' %>
+    
+  </head>
+
+  <body>
+   <!-- Header -->
+        <div id="header" style="background-position: 50% 0%; height:100%;" data-stellar-background-ratio="0.5">
+            <div class="container">
+                <div class="row">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <a href="home" title="">
+                            <img src="logo.png" alt="Logo" />
+                        </a>
+                    </div>
+                    <!-- End Logo -->
+                </div>
+                <!-- Top Menu -->
+                <div id="hornav" class="row text-light">
+                    <div class="col-md-12">
+                        <div class="text-center visible-lg">
+                            <ul id="hornavmenu" class="nav navbar-nav">
+                                <li>
+                                    <a href="/pages/home" class="fa-home active">Home</a>
+                                </li>
+                                <li>
+                                    <span class="fa-gears ">Account</span>
+                                    <ul>
+                                      <li>
+                                            <a href="/users/sign_in">Sign In</a>
+                                        </li>
+                                        <li>
+                                            <a href="/users/sign_up" >Sign Up</a>
+                                        </li>
+                                     </ul>
+                                </li>
+                                <li>
+                                    <a href="/pages/about" class="fa-users ">About Us</a>
+                                    
+                                </li>
+                                <li>
+                                     <a class="fa-cutlery ">Recipes</a>
+                                   <ul>
+                                      <li>
+                                            <a href="/recipes/new">Add Recipe</a>
+                                        </li>
+                                        <li>
+                                            <a href="/recipes" >The Collective</a>
+                                        </li>
+                                     </ul>
+                                   
+                                </li>
+                                <li>
+                                    
+                                </li>
+                                <li>
+                                    <a href="/pages/contact" class="fa-comment ">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Top Menu -->
+            </div>
+        </div>
+        <!-- End Header -->
+        <!-- === END HEADER === -->
+    <%= yield %>
+  </body>
+<html>

@@ -17,6 +17,9 @@ gem 'acts_as_commentable_with_threading'
 gem 'rails-timeago', '~> 2.0'
 gem 'awesome_nested_set'
 
+#Heroku gems
+gem 'pg', '~> 0.18.4'
+gem 'rails_12factor', '~> 0.0.3'
 
 #CSS Gems
 gem "animate-rails"

@@ -124,6 +124,7 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (~> 0.3.0)
+    pg (0.18.4-x86-mingw32)
     puma (3.6.0)
     rack (2.0.1)
     rack-test (0.6.3)
@@ -148,6 +149,11 @@ GEM
     rails-timeago (2.15.0)
       actionpack (>= 3.1)
       activesupport (>= 3.1)
+    rails_12factor (0.0.3)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.5)
+    rails_stdout_logging (0.0.5)
     railties (5.0.0.1)
       actionpack (= 5.0.0.1)
       activesupport (= 5.0.0.1)
@@ -227,9 +233,11 @@ DEPENDENCIES
   jquery-visibility-rails
   modernizr-rails
   paperclip (~> 5.1)
+  pg (~> 0.18.4)
   puma (~> 3.0)
   rails (~> 5.0.0, >= 5.0.0.1)
   rails-timeago (~> 2.0)
+  rails_12factor (~> 0.0.3)
   responsive-nav-rails (~> 1.0, >= 1.0.38)
   rubygems-update (~> 2.6, >= 2.6.8)
   sass-rails (~> 5.0)
