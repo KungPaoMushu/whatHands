@@ -5,8 +5,8 @@
     <%= csrf_meta_tags %>
     
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag    'font-awesome', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag    'nexus', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'font-awesome', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'nexus', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:100,300,400' %>
     <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Roboto:400,300' %>
   
@@ -17,13 +17,13 @@
 
   <body>
    <!-- Header -->
-        <div id="header" style="background-position: 50% 0%; height:100%;" data-stellar-background-ratio="0.5">
+        <div id="header" style="background-position: 50% 0%; height:25%;" data-stellar-background-ratio="0.5">
             <div class="container">
                 <div class="row">
                     <!-- Logo -->
                     <div class="logo">
                         <a href="home" title="">
-                            <img src="logo.png" alt="Logo" />
+                            <%= image_tag "logo.png" %>
                         </a>
                     </div>
                     <!-- End Logo -->
