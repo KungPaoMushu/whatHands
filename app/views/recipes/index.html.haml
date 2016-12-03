@@ -1,9 +1,14 @@
+= form_tag recipes_path, :method => 'get' do
+  = text_field_tag :search, params[:search]
+  = submit_tag "Search"
+=link_to "Advanced Search", new_search_path
+
 - @recipe.each_slice(3) do |recipes|
-	.row
-		- recipes.each do |recipe|
-			.col-md-4
-				.recipe
-					.image_wrapper
-						= link_to recipe do
-							= image_tag recipe.image.url.to_s
-						%h2= link_to recipe.title, recipe
+  .row
+    - recipes.each do |recipe|
+      .col-md-4
+        .recipe
+          .image_wrapper
+            = link_to recipe do
+              = image_tag recipe.image.url.to_s
+            %h2= link_to recipe.title, recipe

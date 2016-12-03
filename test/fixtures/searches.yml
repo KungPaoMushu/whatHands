@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  keywords: MyString
+  meal_type: MyString
+  ingredients: MyString
+  cuisine_type: MyString
+
+two:
+  keywords: MyString
+  meal_type: MyString
+  ingredients: MyString
+  cuisine_type: MyString

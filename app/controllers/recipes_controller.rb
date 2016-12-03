@@ -4,7 +4,7 @@ class RecipesController < ApplicationController
 
 	def index
 		@recipe = Recipe.all.order("created_at DESC")
-		
+		@recipe = Recipe.search(params[:search])
 	end
 
 	def show

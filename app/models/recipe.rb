@@ -13,5 +13,11 @@ mount_uploader :image, ImageUploader
   															allow_destroy: true
 
 	validates :title, :image, :cuisine_type, :meal_type, :ingredients, :directions, presence: true
-
+  def self.search(search)
+    if search
+      where(["title LIKE ?", "%#{search}%"])
+    else
+      all
+    end
+  end
 end
