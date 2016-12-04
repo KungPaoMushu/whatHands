@@ -7,7 +7,7 @@ gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'simple_form', '~> 3.3', '>= 3.3.1'
 gem 'coffee-script-source', '1.8.0'
 gem 'paperclip', '~> 5.1'
-gem 'sqlite3'
+gem 'pg'
 gem 'cocoon', '~> 1.2', '>= 1.2.6'
 gem 'puma', '~> 3.0'
 gem 'devise', '~> 4.2'
@@ -18,7 +18,8 @@ gem 'rails-timeago', '~> 2.0'
 gem 'awesome_nested_set'
 
 #Heroku gems
-gem 'pg', '~> 0.18.4'
+
+
 gem 'rails_12factor', '~> 0.0.3'
 
 #CSS Gems
