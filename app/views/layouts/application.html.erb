@@ -3,16 +3,16 @@
   <head>
     <title>Recipe Collective</title>
     <%= csrf_meta_tags %>
-    
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag    'font-awesome', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag    'nexus', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:100,300,400' %>
     <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Roboto:400,300' %>
-  
+
     <%= javascript_include_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'modernizr' %>
-    
+
   </head>
 
   <body>
@@ -68,7 +68,7 @@
                                 </li>
                                 <li>
                                     <a href="/pages/about" class="fa-users ">About Us</a>
-                                    
+
                                 </li>
                                 <li>
                                      <a class="fa-cutlery ">Recipes</a>
@@ -80,10 +80,10 @@
                                             <a href="/recipes" >The Collective</a>
                                         </li>
                                      </ul>
-                                   
+
                                 </li>
                                 <li>
-                                    
+
                                 </li>
                                 <li>
                                     <a href="/pages/contact" class="fa-comment ">Contact</a>
@@ -99,4 +99,20 @@
         <!-- === END HEADER === -->
     <%= yield %>
   </body>
+
+  <div id="footer" class="background-white">
+      <div class="container no-padding background-white">
+          <div class="row">
+              <!-- Footer Menu -->
+              <div id="footermenu" class="col-md-8">
+
+              </div>
+              <!-- End Footer Menu -->
+              <!-- Copyright -->
+              <div id="copyright" class="col-md-4 background-white" style="color:grey">
+                  <p class="pull-right">(c) 2016 whatHands</p>
+              </div>
+              <!-- End Copyright -->
+          </div>
+      </div>
 <html>
