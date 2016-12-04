@@ -44,4 +44,7 @@
 	.row
 		.col-md-12
 		%div.comments-container
+		-if user_signed_in?
 			= render partial: "comments/template", locals: {commentable: @recipe, new_comment: @comment}
+		-else
+			= render partial: "comments/show", locals: {commentable: @recipe}

@@ -9,8 +9,13 @@ class RecipesController < ApplicationController
 
 	def show
 			@recipe = Recipe.find(params[:id])
-	    @comments = @recipe.comment_threads.order('created_at desc')
-	    @new_comment = Comment.build_from(@recipe, current_user.id, "")
+	    
+	    if user_signed_in?
+	    	@comments = @recipe.comment_threads.order('created_at desc')
+	   	 	@new_comment = Comment.build_from(@recipe, current_user.id, "")
+	   	else
+	   		@comments = @recipe.comment_threads.order('created_at desc')
+	   	end
 	end
 
 	def new

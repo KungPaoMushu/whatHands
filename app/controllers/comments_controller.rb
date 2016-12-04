@@ -49,7 +49,7 @@ end
   private
 
   def comment_params
-    params.require(:user_id)
+    
     params.require(:comment).permit(:body, :commentable_id, :commentable_type, :comment_id)
   end
 
