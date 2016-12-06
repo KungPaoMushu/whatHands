@@ -45,9 +45,12 @@
 				= link_to "Delete", recipe_path, method: :delete, data: {confirm: "Are you sure you want to delete?" }, class: "btn btn-danger"
 
 	.row
+		<div style = 'margin: 50px;' >
 		.col-md-12
 		%div.comments-container
 		-if user_signed_in?
 			= render partial: "comments/template", locals: {commentable: @recipe, new_comment: @comment}
 		-else
 			= render partial: "comments/show"
+
+		</div>
