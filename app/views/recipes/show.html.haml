@@ -1,7 +1,10 @@
 .main_content
 	#recipe_top.row
+
 		.col-md-4
+			<div style = 'margin: 50px;' >
 			= image_tag @recipe.image.url.to_s, class: "recipe_image"
+			</div>
 		.col-md-8
 			#recipe_info
 				%h1= @recipe.title
@@ -48,6 +51,3 @@
 			= render partial: "comments/template", locals: {commentable: @recipe, new_comment: @comment}
 		-else
 			= render partial: "comments/show"
-
-
-
