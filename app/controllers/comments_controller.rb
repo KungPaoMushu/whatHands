@@ -38,14 +38,13 @@ end
     end
     
   def destroy
-    @user = current_user
-    @comment = Comment.find(params[:id])
     @comment.destroy
-      render :json => @comment, :status => :ok
-    else
-      render :js => "alert('error deleting comment');"
-    end
-  end
+    respond_to do |format|
+          format.html { redirect_to recipes_url, notice: 'Comment was successfully destroyed.' }
+          format.json { head :no_content }
+        end
+      end
+end
   private
 
   def comment_params
