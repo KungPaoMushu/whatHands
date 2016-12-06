@@ -3,7 +3,7 @@
     <div class="comment">
       <p><%= comment.user.email %> <em>(<%= time_ago_in_words(comment.created_at) %> ago)</em></p>
       <p><%= comment.body %></p>
-      <%= link_to "Delete", comment_path(comment), method: :delete, data: {confirm: "Are you sure you want to delete?" }, class: "btn btn-danger" %>
+     <!-- < %= link_to "Delete", comment_path(comment), method: :delete, data: {confirm: "Are you sure you want to delete?" }, class: "btn btn-danger" %> -->
       <div class="comment-nav">
       <span class="comment-reply">Reply</span></div>
       <div class="reply">
