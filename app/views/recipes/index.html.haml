@@ -1,7 +1,5 @@
-= form_tag recipes_path, :method => 'get' do
-  = text_field_tag :search, params[:search]
-  = submit_tag "Search"
-=link_to "Advanced Search", new_search_path
+.row
+%h2 Recipes
 
 - @recipe.each_slice(3) do |recipes|
   .row
