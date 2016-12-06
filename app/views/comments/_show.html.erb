@@ -1,6 +1,20 @@
 <div class="comments-header">  
-  <h4>
-    <%= commentable.comment_threads.count == 0 ? "no" : commentable.comment_threads.count %> comments
-  </h4>
-  
+  <h2>
+        Comment Section
+  </h2>
+  </div>
+      <% @comments.each do |comment| %>
+        <div class="comments-show">
+          <div class="comment">
+          <p><%= comment.user.email %> <em>(<%= time_ago_in_words(comment.created_at) %> ago)</em></p>
+          <p><%= comment.body %></p> 
+
+          <!-- @comment.has_children? (To check if a comment has children) (@comment.children [retreives comment child need some sort if has child then display else continue?])-->
+           <% end %>
+         </div>
+  </div>
 </div>
+  
+
+
+

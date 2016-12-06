@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   resources :recipes
   resources :comments
   resources :searches
-
   
   root "pages#show", page: "home"
   root "pages#show", page: "about"
