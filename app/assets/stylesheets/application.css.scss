@@ -10,7 +10,7 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- 
+
  *= require jquery-ui
  *= require slimbox2
  *= require animate
@@ -18,7 +18,7 @@
  *= require_tree .
  *= require_self
  */
- 
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
@@ -49,6 +49,10 @@ body {
 	font-weight: bold;
 }
 
+.home #navbar
+{
+  display: none;
+}
 .navbar {
 	margin-bottom: 50px;
 	@include box-shadow;
