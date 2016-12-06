@@ -1,3 +1,5 @@
+<div class = "row">
+<div class="col-md-6 col-md-offset-3">
 = simple_form_for @recipe, html: { multipart: true } do |f|
 	- if @recipe.errors.any?
 		#errors
@@ -48,3 +50,5 @@
 						= link_to_add_association 'Add New Step', f, :directions, class: "btn btn-info add-button"
 
 	= f.button :submit, class: "btn btn-lg btn-primary"
+	</div>
+	</div>
